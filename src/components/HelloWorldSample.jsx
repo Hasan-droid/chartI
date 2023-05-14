@@ -30,9 +30,12 @@ export class HelloWorldSample extends Component {
             x:x,
             y:y,
             marker:{
-              color: ['rgba(204,204,204,1)', 'rgba(204,204,204,1)','rgba(204,204,204,1)', 'rgba(222,45,38,0.8)', 'rgba(204,204,204,1)', 'rgba(204,204,204,1)', ]
+              color: ['rgba(204,204,204,1)', 'rgba(204,204,204,1)','rgba(204,204,204,1)', 'rgba(222,45,38,0.8)', 'rgba(204,204,204,1)', 'rgba(204,204,204,1)' ]
             },
-            type: 'bar'
+            width: [1, 0.8, 0.8,0.2, 0.8, 0.8],
+            type: 'bar',
+            text: y.map(String),
+            textposition: 'auto'
           };
           
           var data = [trace1];
@@ -43,7 +46,7 @@ export class HelloWorldSample extends Component {
           
          
             Plotly.newPlot(DIV, data, layout);
-        }, 6000);
+        }, 300);
         
     }
    
